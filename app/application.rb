@@ -1,19 +1,3 @@
-
-
-      if item =@@items.find{|i| i.name == item_name}
-        resp.write item.price
-      else 
-        resp.status = 400
-        resp.write "Item not found"
-      end
-    else
-      resp.status=404
-      resp.write "Route not found"
-    end
-    resp.finish
-  end
-end
-
 class Application 
   
   @@items = [Item.new ("Apples", 5.23), Item.new("Oranges", 2.43)]
@@ -35,7 +19,7 @@ class Application
       resp.status = 404 
       resp.write "Route not found"
     end 
-  resp.finidh 
+  resp.finish 
   end 
 end 
 
